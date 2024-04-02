@@ -4,6 +4,7 @@ import { sidebar } from './sidebar'
 export default defineConfig({
   title: '小代的知识库',
   description: '学习笔记',
+  srcDir: '/',
   themeConfig: {
     outline: 'deep',
     siteTitle: '知识库',
