@@ -10,5 +10,13 @@ export const daily: DefaultTheme.SidebarItem[] = [
       path.resolve(__dirname, './../../daily/appinstall'),
       '/daily/appinstall'
     )
+  },
+  {
+    text: '提效率工具',
+    collapsed: true,
+    items: await buildSidebar(
+      path.resolve(__dirname, './../../daily/software'),
+      '/daily/software'
+    )
   }
 ]
