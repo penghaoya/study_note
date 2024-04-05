@@ -8,7 +8,7 @@ hero:
     src: /logo.svg
   actions:
     - theme: brand
-      text: 开始阅读1📖
+      text: 开始阅读📖
       link: /web/
     - theme: alt
       text: 导航
