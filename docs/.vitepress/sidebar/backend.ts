@@ -6,10 +6,12 @@ export const backend: DefaultTheme.SidebarItem[] = [
   {
     text: 'Node.js',
     collapsed: true,
-    items: await buildSidebar(
-      path.resolve(__dirname, './../../backend/node'),
-      '/backend/node/'
-    )
+    items: [
+      ...(await buildSidebar(
+        path.resolve(__dirname, './../../backend/node'),
+        '/backend/node/'
+      ))
+    ]
   },
   {
     text: 'NestJs',

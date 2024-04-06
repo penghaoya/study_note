@@ -1,5 +1,5 @@
 import type { DefaultTheme } from 'vitepress/theme'
-import { buildSidebar, buildSidebar001 } from './../scripts/generateSidebar'
+import { buildSidebar } from './../scripts/generateSidebar'
 import path from 'path'
 
 const baseDir = path.resolve(__dirname, './../../web/framework')
