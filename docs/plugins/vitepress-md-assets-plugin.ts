@@ -1,37 +1,40 @@
-// vitepress-md-assets-plugin.js
 import { createFilter, FilterPattern } from '@rollup/pluginutils'
 import type { Plugin } from 'vite'
-
-import fs from 'fs-extra' // 确保安装了 fs-extra
+import fs from 'fs-extra'
 import path from 'path'
-import { json } from 'stream/consumers'
+
 interface Options {
   include?: FilterPattern
   exclude?: FilterPattern
+  // 新增配置选项
+  outputDir?: string // 构建输出目录
+  docsDir?: string // 文档源文件目录
 }
 
 export default function vitepressMdAssetsPlugin(options: Options = {}): Plugin {
-  // 使用createFilter来确保我们只处理Markdown文件
   const filter = createFilter(options.include || ['**/*.md'], options.exclude)
+  // 使用用户提供的目录或默认值
+  const outputDir = options.outputDir || 'docs/.vitepress/dist'
+  const docsDir = options.docsDir || 'docs'
 
   return {
     name: 'vitepress-md-assets',
     enforce: 'pre',
-    apply: 'build', // 仅在构建阶段应用插件
+    apply: 'build',
     transform(src: string, id: string) {
-      if (!filter(id)) return null // 只处理Markdown文件
+      if (!filter(id)) return null
 
       const imgRegex = /!\[.*?\]\((\.\/assets\/.*?\.(png|jpe?g|gif|svg))\)/gi
       let newSrc = src
-      const matches = src.matchAll(imgRegex)
 
-      for (const match of matches) {
+      for (const match of src.matchAll(imgRegex)) {
         const [imgTag, relativePath] = match
         const absolutePath = path.resolve(path.dirname(id), relativePath)
+        const relativeToDocs = path.relative(docsDir, absolutePath)
         const outputPath = path.resolve(
           process.cwd(),
-          'docs/.vitepress/dist',
-          path.relative('docs', absolutePath)
+          outputDir,
+          relativeToDocs
         )
 
         // 确保输出目录存在
@@ -44,16 +47,12 @@ export default function vitepressMdAssetsPlugin(options: Options = {}): Plugin {
         const newRelativePath = path
           .relative(process.cwd(), outputPath)
           .replace(/\\/g, '/')
-        console.log(newRelativePath)
         newSrc = newSrc.replace(
           imgTag,
           imgTag.replace(relativePath, `/${newRelativePath}`)
         )
       }
-      return {
-        code: newSrc,
-        map: null // 不提供source map
-      }
+      return { code: newSrc, map: null }
     }
   }
 }
