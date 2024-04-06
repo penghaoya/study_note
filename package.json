@@ -12,7 +12,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/pluginutils": "^5.1.0",
     "@types/node": "^20.12.2",
     "vitepress": "^1.0.2"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
   }
 }
