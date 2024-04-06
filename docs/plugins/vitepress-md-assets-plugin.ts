@@ -49,10 +49,7 @@ export default function vitepressMdAssetsPlugin(options: Options = {}): Plugin {
           imgTag,
           imgTag.replace(relativePath, `/${newRelativePath}`)
         )
-        console.log(newSrc)
       }
-
-      console.log(id)
       return {
         code: newSrc,
         map: null // 不提供source map
