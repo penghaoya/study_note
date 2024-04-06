@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
-import vitepressMdAssetsPlugin from './plugins/vitepress-md-assets-plugin' // 从plugins目录引入
-
+import vitepressMdAssetsPlugin from './plugins/vitepress-md-assets-plugin' 
 export default defineConfig({
   plugins: [vitepressMdAssetsPlugin()]
 })
