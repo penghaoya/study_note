@@ -14,12 +14,13 @@ hero:
       text: 导航
       link: /
 features:
-  - title: 前端基础
+  - title: 🚨前端基础
     details: Html , Css , JavaScript
     icon: 🕸️
     link: /web/
   - title: 前端框架
     icon: 🔥
+    link: /web/framework/
     details: Vue , React
   - title: 工程化
     icon: 📦

@@ -6,7 +6,7 @@ const baseDir = path.resolve(__dirname, './../../web/framework')
 
 export const web: DefaultTheme.SidebarItem[] = [
   {
-    text: '前端基础',
+    text: '🚨前端基础',
     link: '/web/',
     collapsed: true,
     items: [{ text: 'HTML' }, { text: 'Css' }]
