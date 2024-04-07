@@ -15,8 +15,8 @@ export const devops: DefaultTheme.SidebarItem[] = [
     text: 'Docker',
     collapsed: true,
     items: await buildSidebar(
-      path.resolve(__dirname, './../../devops/Docker'),
-      '/daily/Docker'
+      path.resolve(__dirname, './../../devops/docker'),
+      '/devops/docker'
     )
   }
 ]
