@@ -18,5 +18,13 @@ export const devops: DefaultTheme.SidebarItem[] = [
       path.resolve(__dirname, './../../devops/docker'),
       '/devops/docker'
     )
+  },
+  {
+    text: 'Nginx',
+    collapsed: true,
+    items: await buildSidebar(
+      path.resolve(__dirname, './../../devops/nginx'),
+      '/devops/nginx'
+    )
   }
 ]
