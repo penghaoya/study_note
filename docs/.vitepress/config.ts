@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { sidebar } from './sidebar'
+import vitepressMdAssetsPlugin from './scripts/vitepress-md-assets-plugin'
 
 export default defineConfig({
   title: '小代的知识库',
@@ -53,5 +54,8 @@ export default defineConfig({
       message: '少抱怨，多思考，未来更美好',
       copyright: 'Copyright © 2023-present XD'
     }
+  },
+  vite: {
+    plugins: [vitepressMdAssetsPlugin()]
   }
 })

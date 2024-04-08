@@ -9,7 +9,18 @@ export const web: DefaultTheme.SidebarItem[] = [
     text: '🚨前端基础',
     link: '/web/',
     collapsed: true,
-    items: [{ text: 'HTML' }, { text: 'Css' }]
+    items: [
+      { text: 'HTML' },
+      { text: 'Css' },
+      {
+        text: 'JavaScript',
+        collapsed: true,
+        items: await buildSidebar(
+          path.join(__dirname, './../../web/base/js'),
+          '/web/base/js'
+        )
+      }
+    ]
   },
   { text: '🌐计算机网络', collapsed: true, items: [{ text: '网络' }] },
   {
