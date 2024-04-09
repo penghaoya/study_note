@@ -10,8 +10,22 @@ export const web: DefaultTheme.SidebarItem[] = [
     link: '/web/',
     collapsed: true,
     items: [
-      { text: 'HTML' },
-      { text: 'Css' },
+      {
+        text: 'HTML',
+        collapsed: true,
+        items: await buildSidebar(
+          path.join(__dirname, './../../web/base/js'),
+          '/web/base/js'
+        )
+      },
+      {
+        text: 'Css',
+        collapsed: true,
+        items: await buildSidebar(
+          path.join(__dirname, './../../web/base/js'),
+          '/web/base/js'
+        )
+      },
       {
         text: 'JavaScript',
         collapsed: true,
@@ -19,14 +33,20 @@ export const web: DefaultTheme.SidebarItem[] = [
           path.join(__dirname, './../../web/base/js'),
           '/web/base/js'
         )
+      },
+      {
+        text: 'TavaScript',
+        collapsed: true,
+        items: await buildSidebar(
+          path.join(__dirname, './../../web/base/typescript'),
+          '/web/base/typescript'
+        )
       }
     ]
   },
-  { text: '🌐计算机网络', collapsed: true, items: [{ text: '网络' }] },
   {
     text: '📦工程化',
     collapsed: true,
-    link: '/link/',
     items: [
       { text: 'Webpack', items: [{ text: '快速入门' }] },
       { text: 'Vite', items: [{ text: '快速入门' }] }

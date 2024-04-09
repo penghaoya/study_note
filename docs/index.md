@@ -22,12 +22,15 @@ features:
     icon: 🔥
     link: /web/framework/
     details: Vue , React
+  - title: 计算机基础
+    icon: 💻
+    details: 计算机网络 , 数据结构算法 , 操作系统
   - title: 工程化
     icon: 📦
     details: Webpack , Vite , Rollup
-  - title: 移动端
+  - title: 客户端
     icon: 📱
-    details: Uni-App , React Native,
+    details: Uni-App , React Native, Electron
   - title: 后端
     icon: 🧰
     link: /backend/
@@ -39,8 +42,5 @@ features:
   - title: 折腾日常
     link: /daily/
     icon: 🕳️
-    details: 软件安装 , 环境配置 ,日常折腾
-  - title: 工具推荐
-    icon: 🛠️
     details: 软件安装 , 环境配置 ,日常折腾
 ---
