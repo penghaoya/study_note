@@ -1,6 +1,13 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, DefaultTheme } from 'vitepress'
 import { sidebar } from './sidebar'
 import vitepressMdAssetsPlugin from './scripts/vitepress-md-assets-plugin'
+const nav: DefaultTheme.NavItem[] = [
+  { text: '🛖主页', link: '/' },
+  {
+    text: '前端',
+    items: []
+  }
+]
 
 export default defineConfig({
   title: '小代的知识库',
@@ -37,10 +44,7 @@ export default defineConfig({
         }
       }
     },
-    nav: [
-      { text: '🛖主页', link: '/' },
-      { text: '前端', items: [{ text: '🛖主页', link: '/' }] }
-    ],
+    nav: nav,
     sidebar: sidebar,
     socialLinks: [
       {

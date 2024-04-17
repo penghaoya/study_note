@@ -14,16 +14,16 @@ export const web: DefaultTheme.SidebarItem[] = [
         text: 'HTML',
         collapsed: true,
         items: await buildSidebar(
-          path.join(__dirname, './../../web/base/js'),
-          '/web/base/js'
+          path.join(__dirname, './../../web/base/html'),
+          '/web/base/html'
         )
       },
       {
         text: 'Css',
         collapsed: true,
         items: await buildSidebar(
-          path.join(__dirname, './../../web/base/js'),
-          '/web/base/js'
+          path.join(__dirname, './../../web/base/css'),
+          '/web/base/css'
         )
       },
       {

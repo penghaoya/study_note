@@ -15,7 +15,7 @@ hero:
       link: /
 features:
   - title: 🚨前端基础
-    details: Html , Css , JavaScript
+    details: Html  Css JavaScript Typescript
     icon: 🕸️
     link: /web/
   - title: 前端框架
@@ -24,7 +24,7 @@ features:
     details: Vue , React
   - title: 计算机基础
     icon: 💻
-    details: 计算机网络 , 数据结构算法 , 操作系统
+    details: 计算机网络  数据结构算法  操作系统
   - title: 工程化
     icon: 📦
     details: Webpack , Vite , Rollup
