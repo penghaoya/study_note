@@ -47,4 +47,8 @@ features:
     link: /offer/1.如何书写简历
     icon: 🌻
     details: 软件安装 , 环境配置 ,日常折腾
+  - title: 面试题目
+    link: /interview/
+    icon: 🤑
+    details: 网络，工程化，算法 , 浏览器 , Promise
 ---
