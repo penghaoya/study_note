@@ -6,9 +6,12 @@ export const interview: DefaultTheme.SidebarItem[] = [
   {
     text: '网络面试题',
     collapsed: true,
-    items: await buildSidebar(
-      path.resolve(__dirname, './../../interview/网络'),
-      '/interview'
-    )
+    items: [
+      {
+        text: '网络面试题',
+        collapsed: true,
+        link: '/interview/网络/网络面试题'
+      }
+    ]
   }
 ]
