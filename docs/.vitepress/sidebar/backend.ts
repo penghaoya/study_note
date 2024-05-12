@@ -20,5 +20,13 @@ export const backend: DefaultTheme.SidebarItem[] = [
       path.resolve(__dirname, './../../backend/node/Nestjs'),
       '/backend/node/Nestjs'
     )
+  },
+  {
+    text: 'Golang',
+    collapsed: true,
+    items: await buildSidebar(
+      path.resolve(__dirname, './../../backend/golang/lanage/'),
+      '/backend/golang/lanage'
+    )
   }
 ]
