@@ -31,17 +31,17 @@ export const growth: DefaultTheme.SidebarItem[] = [
           await loveSidebar('恋爱阶段危机情况处理', 'module3'),
           await loveSidebar('自我提升和修养', 'module4')
         ]
-      },
-      {
-        text: '思考复盘',
-        collapsed: true,
-        items: [
-          ...(await buildSidebar(
-            path.resolve(__dirname, './../../growth/lyl/think'),
-            '/growth/lyl/think'
-          ))
-        ]
       }
+      // {
+      //   text: '思考复盘',
+      //   collapsed: true,
+      //   items: [
+      //     ...(await buildSidebar(
+      //       path.resolve(__dirname, './../../growth/lyl/think'),
+      //       '/growth/lyl/think'
+      //     ))
+      //   ]
+      // }
     ]
   }
 ]
