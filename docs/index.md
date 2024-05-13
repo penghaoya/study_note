@@ -43,6 +43,10 @@ features:
     link: /daily/
     icon: 🕳️
     details: 软件安装 , 环境配置 ,日常折腾
+  - title: 个人成长
+    link: /growth/
+    icon: 💑
+    details: 心智，恋爱，生活
   - title: 面试准备
     link: /offer/1.如何书写简历
     icon: 🌻

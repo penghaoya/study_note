@@ -5,6 +5,7 @@ import { backend } from './backend'
 import { daily } from './daily'
 import { offer } from './offer'
 import { interview } from './interview'
+import { growth } from './growth'
 
 export const sidebar: DefaultTheme.Sidebar = {
   '/web/': web,
@@ -12,5 +13,6 @@ export const sidebar: DefaultTheme.Sidebar = {
   '/backend/': backend,
   '/daily/': daily,
   '/offer/': offer,
-  '/interview/': interview
+  '/interview/': interview,
+  '/growth/': growth
 }
