@@ -26,7 +26,7 @@ export const growth: DefaultTheme.SidebarItem[] = [
             path.resolve(__dirname, './../../growth/lyl/love'),
             '/growth/lyl/love'
           )),
-          await loveSidebar('恋爱技巧初识', 'module1'),
+          await loveSidebar('吸引力好感如何产生', 'module1'),
           await loveSidebar('恋爱阶段的维护', 'module2'),
           await loveSidebar('恋爱阶段危机情况处理', 'module3'),
           await loveSidebar('自我提升和修养', 'module4')
