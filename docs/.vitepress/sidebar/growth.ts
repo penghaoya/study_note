@@ -15,31 +15,31 @@ async function loveSidebar(title: string, dir: string) {
 }
 export const growth: DefaultTheme.SidebarItem[] = [
   {
-    text: '生活',
+    text: '恋爱成长',
     collapsed: true,
     items: [
-      ...(await buildSidebar(
-        path.resolve(__dirname, './../../growth/lyl'),
-        '/growth/lyl'
-      )),
       {
-        text: '恋爱成长',
+        text: '恋爱成长-学习',
         collapsed: true,
         items: [
           ...(await buildSidebar(
             path.resolve(__dirname, './../../growth/lyl/love'),
             '/growth/lyl/love'
           )),
-          await loveSidebar('有关“吸引力”的展示和“好感”的产生', 'module1'),
-          await loveSidebar(
-            '恋爱阶段的维护，深入，以及稳定恋爱关系',
-            'module2'
-          ),
-          await loveSidebar(
-            '恋爱阶段（包括长期关系）的危机情况处理',
-            'module3'
-          ),
-          await loveSidebar('恋爱中的自我提升和修养', 'module4')
+          await loveSidebar('恋爱技巧初识', 'module1'),
+          await loveSidebar('恋爱阶段的维护', 'module2'),
+          await loveSidebar('恋爱阶段危机情况处理', 'module3'),
+          await loveSidebar('自我提升和修养', 'module4')
+        ]
+      },
+      {
+        text: '思考复盘',
+        collapsed: true,
+        items: [
+          ...(await buildSidebar(
+            path.resolve(__dirname, './../../growth/lyl'),
+            '/growth/lyl'
+          ))
         ]
       }
     ]

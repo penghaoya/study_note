@@ -12,7 +12,6 @@ const nav: DefaultTheme.NavItem[] = [
 export default defineConfig({
   title: '小代的知识库',
   description: '学习笔记',
-
   themeConfig: {
     outline: 'deep',
     siteTitle: '知识库',
