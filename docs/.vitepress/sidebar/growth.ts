@@ -37,8 +37,8 @@ export const growth: DefaultTheme.SidebarItem[] = [
         collapsed: true,
         items: [
           ...(await buildSidebar(
-            path.resolve(__dirname, './../../growth/lyl'),
-            '/growth/lyl'
+            path.resolve(__dirname, './../../growth/lyl/think'),
+            '/growth/lyl/think'
           ))
         ]
       }
