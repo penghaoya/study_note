@@ -41,6 +41,16 @@ export const growth: DefaultTheme.SidebarItem[] = [
             '/growth/lyl/relove'
           ))
         ]
+      },
+      {
+        text: '思考复盘',
+        collapsed: true,
+        items: [
+          ...(await buildSidebar(
+            path.resolve(__dirname, './../../growth/lyl/communication'),
+            '/growth/lyl/communication'
+          ))
+        ]
       }
       // {
       //   text: '思考复盘',
