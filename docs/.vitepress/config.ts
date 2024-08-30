@@ -1,5 +1,7 @@
 import { defineConfig, DefaultTheme } from 'vitepress'
 import { sidebar } from './sidebar'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
+
 import vitepressMdAssetsPlugin from './scripts/vitepress-md-assets-plugin'
 const nav: DefaultTheme.NavItem[] = [
   { text: '🛖主页', link: '/' },
@@ -57,6 +59,11 @@ export default defineConfig({
     footer: {
       message: '少抱怨，多思考，未来更美好',
       copyright: 'Copyright © 2023-present XD'
+    }
+  },
+  markdown: {
+    config(md) {
+      md.use(tabsMarkdownPlugin)
     }
   },
   vite: {
