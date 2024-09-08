@@ -1,6 +1,10 @@
 import { defineConfig, DefaultTheme } from 'vitepress'
 import { sidebar } from './sidebar'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
+import {
+  groupIconMdPlugin,
+  groupIconVitePlugin
+} from 'vitepress-plugin-group-icons'
 
 import vitepressMdAssetsPlugin from './scripts/vitepress-md-assets-plugin'
 const nav: DefaultTheme.NavItem[] = [
@@ -64,9 +68,10 @@ export default defineConfig({
   markdown: {
     config(md) {
       md.use(tabsMarkdownPlugin)
+      md.use(groupIconMdPlugin)
     }
   },
   vite: {
-    plugins: [vitepressMdAssetsPlugin()]
+    plugins: [vitepressMdAssetsPlugin(), groupIconVitePlugin()]
   }
 })

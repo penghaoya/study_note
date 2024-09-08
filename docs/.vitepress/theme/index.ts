@@ -3,6 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
+import Linkcard from './components/Linkcard.vue'
 
 import './style.css'
 export default {
@@ -13,6 +14,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    app.component('Linkcard', Linkcard)
     enhanceAppWithTabs(app)
   }
 } satisfies Theme
