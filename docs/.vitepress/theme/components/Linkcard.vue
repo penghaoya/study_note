@@ -1,4 +1,3 @@
-<!-- .vitepress/theme/Linkcard.vue -->
 <script setup lang="ts">
 import { computed } from 'vue'
 
@@ -59,8 +58,8 @@ const isEmoji = (str: string) => {
 .linkcard-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .linkcard {
@@ -69,26 +68,27 @@ const isEmoji = (str: string) => {
   background-color: var(--vp-c-bg-soft);
   border-radius: 6px;
   padding: 8px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--vp-c-divider);
 }
 
 .linkcard:hover {
   background-color: var(--vp-c-bg-mute);
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .flex-100 {
   flex-basis: 100%;
 }
 .flex-50 {
-  flex-basis: calc(50% - 6px);
+  flex-basis: calc(50% - 4px);
 }
 .flex-33 {
-  flex-basis: calc(33.333% - 8px);
+  flex-basis: calc(33.333% - 6px);
 }
 
 .logo-container {
@@ -99,13 +99,19 @@ const isEmoji = (str: string) => {
   justify-content: center;
   margin-right: 8px;
   flex-shrink: 0;
+  background-color: var(--vp-c-brand-soft);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.linkcard:hover .logo-container {
+  background-color: var(--vp-c-brand-mute);
 }
 
 .logo {
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
-  border-radius: 4px;
 }
 
 .emoji-logo {
@@ -126,6 +132,32 @@ const isEmoji = (str: string) => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    var(--vp-c-text-1) 50%,
+    transparent 50%
+  );
+  background-size: 6px 1px;
+  background-repeat: repeat-x;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.linkcard:hover .title::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .description {
@@ -139,13 +171,13 @@ const isEmoji = (str: string) => {
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   .linkcard {
-    flex-basis: calc(50% - 6px) !important;
+    flex-basis: calc(50% - 4px) !important;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .linkcard {
     flex-basis: 100% !important;
   }
@@ -153,6 +185,11 @@ const isEmoji = (str: string) => {
   .logo-container {
     width: 28px;
     height: 28px;
+  }
+
+  .logo {
+    width: 18px;
+    height: 18px;
   }
 
   .emoji-logo {
