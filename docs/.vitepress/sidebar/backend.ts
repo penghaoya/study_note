@@ -16,10 +16,24 @@ export const backend: DefaultTheme.SidebarItem[] = [
   {
     text: 'NestJs',
     collapsed: true,
-    items: await buildSidebar(
-      path.resolve(__dirname, './../../backend/node/Nestjs'),
-      '/backend/node/Nestjs'
-    )
+    items: [
+      {
+        text: 'Nestjs笔记',
+        collapsed: true,
+        items: await buildSidebar(
+          path.resolve(__dirname, './../../backend/node/Nestjs'),
+          '/backend/node/Nestjs'
+        )
+      },
+      {
+        text: '珠峰Nestjs',
+        collapsed: true,
+        items: await buildSidebar(
+          path.resolve(__dirname, './../../backend/node/zhufeng_nest'),
+          '/backend/node/zhufeng_nest'
+        )
+      }
+    ]
   },
   {
     text: 'Golang',
