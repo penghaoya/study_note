@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 import Linkcard from './components/Linkcard.vue'
+import 'virtual:group-icons.css'
 
 import './style.css'
 export default {
