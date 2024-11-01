@@ -15,11 +15,11 @@
   "license": "ISC",
   "devDependencies": {
     "@mdit-vue/shared": "^2.1.3",
-    "@types/node": "^22.8.1",
-    "sass": "^1.80.4",
-    "sass-embedded": "^1.80.4",
-    "taze": "^0.17.2",
-    "vitepress": "^1.4.1",
+    "@types/node": "^22.8.6",
+    "sass": "^1.80.5",
+    "sass-embedded": "^1.80.5",
+    "taze": "^0.18.0",
+    "vitepress": "^1.4.3",
     "vitepress-plugin-tabs": "^0.5.0"
   },
   "dependencies": {
