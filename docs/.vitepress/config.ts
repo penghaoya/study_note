@@ -72,6 +72,17 @@ export default defineConfig({
     }
   },
   vite: {
-    plugins: [vitepressMdAssetsPlugin(), groupIconVitePlugin()]
+    plugins: [
+      vitepressMdAssetsPlugin(),
+      groupIconVitePlugin({
+        customIcon: {
+          js: 'logos:javascript', //js图标
+          md: 'logos:markdown', //markdown图标
+          css: 'logos:css-3', //css图标
+          react: 'logos:react',
+          typeorm: 'logos:typeorm'
+        }
+      })
+    ]
   }
 })
