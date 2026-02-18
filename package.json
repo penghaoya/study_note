@@ -15,15 +15,15 @@
   "license": "ISC",
   "devDependencies": {
     "@mdit-vue/shared": "^3.0.2",
-    "@types/node": "^24.9.1",
-    "sass": "^1.93.2",
-    "sass-embedded": "^1.93.2",
-    "taze": "^19.8.1",
+    "@types/node": "^25.2.3",
+    "sass": "^1.97.3",
+    "sass-embedded": "^1.97.3",
+    "taze": "^19.9.2",
     "vitepress": "^1.6.4",
     "vitepress-plugin-tabs": "^0.7.3"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
-    "vitepress-plugin-group-icons": "^1.6.4"
+    "vitepress-plugin-group-icons": "^1.7.1"
   }
 }
